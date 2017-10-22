@@ -31,3 +31,8 @@ body {
 	
 	border-radius: 25px;
 }
+
+.projects {
+	display: block;
+	margin:  0 auto;
+}

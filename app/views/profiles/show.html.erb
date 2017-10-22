@@ -23,7 +23,7 @@
         <td><%= p company.name	%></td>
         <td><%= project.title %></td>
         <td><%= project.description %></td>
-        <td><%= link_to "View",  modal_path(project), remote:true , :class => "btn btn-success" %></td>
+        <td><%= link_to "View/Edit",  modal_path(project), remote:true , :class => "btn btn-success" %></td>
         <td><%= link_to 'Delete', project_path(project),
             data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-danger" %>       	
         </td>
