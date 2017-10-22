@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   put  '/edit'  => 'profiles#edit' 
   get  '/pending' => 'admins#pending'
   get  '/admins/approve/:id' => 'admins#approve', as: 'approve'
+  get  'projects/board'  =>  'projects#projects_board', as: "board"
+  get  'projects/show_modal/:id'  =>  'projects#show_modal', as: "modal"
+
   
 
 

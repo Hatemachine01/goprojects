@@ -14,6 +14,17 @@ class ProjectsController < ApplicationController
   def show
   end
 
+
+  def show_modal
+    @project = Project.find_by_id(params[:id])
+  end
+  
+  def projects_board
+    @popular_projects = Project.where(approved?:true)
+  end
+
+
+
   # GET /projects/new
   def new
     @project = Project.new

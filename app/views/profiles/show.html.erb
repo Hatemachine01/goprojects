@@ -4,6 +4,7 @@
   <h1> Hello Admin! </h1>
 
   <%= link_to "View Pending Projects",  pending_path, :class => "btn btn-default" %>
+  <%= link_to "Browse Projects",  board_path, :class => "btn btn-default" %>
 </div>
 <div class="container">         
   <h2> Approved Projects </h2>
@@ -22,7 +23,7 @@
         <td><%= p company.name	%></td>
         <td><%= project.title %></td>
         <td><%= project.description %></td>
-        <td><%= link_to "View",  project_path(project), remote:true , :class => "btn btn-success" %></td>
+        <td><%= link_to "View",  modal_path(project), remote:true , :class => "btn btn-success" %></td>
         <td><%= link_to 'Delete', project_path(project),
             data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-danger" %>       	
         </td>
@@ -35,6 +36,7 @@
 <% else %>
 	 <div class="container">
 	<%= link_to "Create Project", new_project_path , :class => "btn btn-warning" %>
+  <%= link_to "Browse Projects",  board_path, :class => "btn btn-default" %>
   </div>
 
  <div class="container">

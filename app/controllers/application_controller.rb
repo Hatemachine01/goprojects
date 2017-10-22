@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-  
-  @popular_projects = Project.where(approved?:true)
+  #loads 2 approved projects to show on the index page
+  @popular_projects = Project.where(approved?:true).limit(2)
 
   end
   
