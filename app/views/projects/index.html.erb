@@ -1,0 +1,28 @@
+ <div class="container">
+  <%= link_to "Create Project", new_project_path , :class => "btn btn-warning" %>
+  </div>
+
+ <div class="container">
+
+  <h1> Your Projects</h1>
+  
+  <% @current_user.projects.each_slice(3) do |projects| %>
+    <div class="row">
+      <% projects.each do |project| %>
+        <div class="col-md-4">
+      <p><%= image_tag(project.image.thumb.url, alt: 'Image') if project.image? %></p>
+      <p class="lead"> <%= project.title %> </p>
+      <p class="lead"> <%= project.description %> </p>
+      <%= link_to "View", project_path(project) , remote:true, :class => "btn btn-success" %>
+      <% if project.approved? == false %>
+        <span class="badge badge-pill badge-danger">Pending Approval</span>
+      <% else %>
+        <span class="badge badge-pill badge-success">Approved!</span>
+      <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+</div>

@@ -1,0 +1,27 @@
+<div class="center jumbotron">
+  <h1>GoProject!</h1>
+
+  <h2>
+    The number one website to show your projects to the world and receive feedback.
+  </h2>
+
+  <div class="container">
+
+	<h1> Projects the world is talking about </h1>
+	
+	<% @popular_projects.each_slice(3) do |projects| %>
+	  <div class="row">
+	    <% projects.each do |project| %>
+	      <div class="col-md-4">
+			<p><%= image_tag(project.image.thumb.url, alt: 'Image',:class => "img_preview") if project.image? %></p>
+			<p class="lead"> <%= project.title %> </p>
+			<p class="lead"> <%= project.short_description %> </p>
+			<%= link_to "View", project_path(project) , :class => "btn btn-success" %>
+	      </div>
+	    <% end %>
+	  </div>
+	<% end %>
+</div>
+
+  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+</div>

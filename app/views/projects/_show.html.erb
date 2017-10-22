@@ -1,0 +1,35 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+  		<div class="modal-header">
+   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;          </button>
+    <h4 class="modal-title" id="myModalLabel"></h4>
+  		</div>
+    <div class="modal-body">
+		<p>
+		  <strong>Title:</strong>
+		  <%= @project.title %>
+		</p>
+
+		<p>
+		  <strong>Short description:</strong>
+		  <%= @project.short_description %>
+		</p>
+
+		<p>
+		  <strong>Description:</strong>
+		  <%= @project.description %>
+		</p>
+
+		<p>
+		  <strong>Logo:</strong>
+		  <%= image_tag(@project.image.small_thumb.url, alt:'image') if @project.image? %>
+		</p>
+
+		<%= link_to 'Edit', edit_project_path(@project) %> 
+
+	<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+</div>
+

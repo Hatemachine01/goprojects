@@ -1,0 +1,17 @@
+<% if @pending_projects.count == 0 %>
+<h1> No Pending Projects at the moment</h1>
+<% else %>
+<% @pending_projects.each_slice(3) do |projects| %>
+    <div class="row">
+      <% projects.each do |project| %>
+        <div class="col-md-4">
+      <p><%= image_tag(project.image.thumb.url, alt: 'Image') if project.image? %></p>
+      <p class="lead"> <%= project.title %> </p>
+      <p class="lead"> <%= project.description %> </p>
+      <%= link_to "Edit", edit_project_path(project), :class => "btn btn-success" %>
+      <%= link_to "Approve",  approve_path(project), :class => "btn btn-success" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
