@@ -13,7 +13,7 @@
       <p><%= image_tag(project.image.thumb.url, alt: 'Image') if project.image? %></p>
       <p class="lead"> <%= project.title %> </p>
       <p class="lead"> <%= project.description %> </p>
-      <%= link_to "View", project_path(project) , remote:true, :class => "btn btn-success" %>
+      <%= link_to "View/Edit", modal_path(project) , remote:true, :class => "btn btn-success" %>
       <% if project.approved? == false %>
         <span class="badge badge-pill badge-danger">Pending Approval</span>
       <% else %>
