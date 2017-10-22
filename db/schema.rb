@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20171021173522) do
     t.string "short_description"
     t.string "description"
     t.string "image"
+    t.string "faq"
     t.boolean "approved?", default: false
     t.integer "user_id"
     t.datetime "created_at", null: false

@@ -1,5 +1,6 @@
 <div class="container">
 	<p class="lead"><%= @project.title %></p>
 	<p class="lead"><%= @project.description %></p>
+	<p class="lead"><%= @project.faq %></p>
 	<p><%= image_tag(@project.image.thumb.url, alt: 'Image',:class => "img_preview") if @project.image? %></p>
 </div>

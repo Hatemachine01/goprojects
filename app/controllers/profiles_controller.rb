@@ -28,9 +28,6 @@ def edit
 
 
 
-
-
-
  private
     def user_params
       params.require(:user).permit(:name,:last_name)

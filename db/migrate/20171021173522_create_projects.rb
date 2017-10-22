@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.string :short_description
       t.string :description
       t.string :image
+      t.string :faq
       t.boolean :approved? , default:false
 
       t.references :user, foreign_key: true

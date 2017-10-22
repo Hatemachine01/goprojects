@@ -27,6 +27,11 @@
   </div>
 
    <div class="form-group">
+    <%= form.label :FAQs %>
+    <%= form.text_area :faq, id: :project_fag , placeholder: "Don't worry, you can expand on these later.",  class: 'form-control' %>
+  </div>
+
+   <div class="form-group">
     <%= form.label :image %>
     <%= form.file_field :image, class: "btn btn-success" %>
   </div>

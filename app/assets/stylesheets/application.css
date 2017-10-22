@@ -21,6 +21,11 @@ body {
   background-color: #ADD8E6;
 }
 
+
+.jumbotron {
+    background-color:transparent !important; 
+}
+
 .profile-completion {	
 	display:block;
 	margin: 0 auto;

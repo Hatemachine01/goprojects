@@ -24,6 +24,10 @@
 		  <strong>Logo:</strong>
 		  <%= image_tag(@project.image.small_thumb.url, alt:'image') if @project.image? %>
 		</p>
+ 		<p>
+ 		<strong>FAQs:</strong>
+		<p class="lead"><%= @project.faq %></p>
+		</p>
 
 		<%= link_to 'Edit', edit_project_path(@project) %> 
 

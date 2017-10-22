@@ -19,8 +19,8 @@
     <tbody>
     <% @approved_projects.each do |project| %>  
       <tr>
-        <%  company = User.find(project.user_id) %>
-        <td><%= p company.name	%></td>
+        <% p user = User.find(project.user_id) %>
+        <td><%= user.name	%></td>
         <td><%= project.title %></td>
         <td><%= project.description %></td>
         <td><%= link_to "View/Edit",  modal_path(project), remote:true , :class => "btn btn-success" %></td>
