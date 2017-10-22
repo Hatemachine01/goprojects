@@ -39,6 +39,7 @@ gem "font-awesome-rails"
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'file_validators'
+gem 'aws-sdk', '~> 2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
