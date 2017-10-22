@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+before_action :logged_in_user_admin
 
 def pending
  #fetches all projects awaiting approval
@@ -15,13 +16,10 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
+	def logged_in_user_admin
+	    unless current_user.admin?
+	        flash[:danger] = "ACCESS RESTRICTED"
+	                redirect_to root_path
+	    end
+	end
 end
