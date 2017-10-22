@@ -5,21 +5,22 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* 'rails', '~> 5.1.4' & Ruby 2.0.0
 
-* System dependencies
 
-* Configuration
+ GEMS USED
+* gem 'devise'			 
+  gem 'omniauth-facebook' #facebook login fully functional
+  gem 'bootstrap-sass', '3.3.7'
+  gem 'jquery-rails'
+  gem "font-awesome-rails" 
+  gem 'carrierwave', '~> 1.0' #allos photo uploads
+  gem 'mini_magick'		 #creates photothumbnails
+  gem 'file_validators'  #validates photo uploads
 
-* Database creation
 
-* Database initialization
+* Don't forget to seed! rake db:seed
 
-* How to run the test suite
+# GoProjects!
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-# goprojects

@@ -16,7 +16,6 @@ end
 
 
 def edit
-
     if @user.update(user_params)
         redirect_to @user
     else
